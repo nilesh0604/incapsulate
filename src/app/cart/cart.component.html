@@ -1,0 +1,17 @@
+<!-- Page Features -->
+<div class="row text-center my-4">
+  <div *ngFor="let item of cart; let i = index" class="col-lg-3 col-md-6 mb-4">
+    <div class="card">
+      <img class="card-img-top" src="{{item.images[0]}}" height="150" alt="">
+      <div class="card-body">
+        <h4 class="card-title">{{item.name}}</h4>
+        <p class="card-text">${{item.price}}</p>
+        <p class="card-text">{{item.description}}</p>
+      </div>
+      <div class="card-footer">
+        <a (click)="removeFromcart(i)" class="btn btn-primary">Remove from Cart!</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.row -->
