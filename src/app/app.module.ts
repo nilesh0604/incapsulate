@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
@@ -19,6 +20,7 @@ import { ProductsManagerService } from './products-manager.service';
   imports: [
     BrowserModule,
     HttpModule,
+    InfiniteScrollModule,
     RouterModule.forRoot([
       {path: '', redirectTo: "/products", pathMatch: 'full'},
       {path:'products', component: ProductsComponent},
